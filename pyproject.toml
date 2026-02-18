@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "ai-notes-backend"
+version = "0.1.0"
+description = "AI Notes App backend (FastAPI + async SQLAlchemy + Postgres + AI service layer)"
+authors = ["You <you@example.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.0"
+uvicorn = {extras = ["standard"], version = "^0.32.0"}
+SQLAlchemy = {version = "^2.0.36", extras = ["asyncio"]}
+asyncpg = "^0.30.0"
+alembic = "^1.13.3"
+pydantic = "^2.9.0"
+pydantic-settings = "^2.6.0"
+python-jose = "^3.3.0"
+passlib = {version = "^1.7.4", extras = ["bcrypt"]}
+psycopg2-binary = "^2.9.9"
+redis = "^5.0.8"
+celery = "^5.4.0"
+httpx = "^0.27.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+ruff = "^0.7.0"
+mypy = "^1.13.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
